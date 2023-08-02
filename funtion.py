@@ -12,8 +12,6 @@ import time
 from apscheduler.schedulers.background import BackgroundScheduler
 
 database = 'mma_odds.db'
-limitdate = '2023-06-30'
-outputfile = 'data.csv'
 
 def connect_to_database(db_name):
     try:
@@ -318,7 +316,7 @@ def scrapping_odds():
     save_to_csv(new_data, outputfile)
     db_connection.close()
 
-def run_scrapping():
+def run_scrapping(limitdate):
     # Create the BackgroundScheduler instance
     scheduler = BackgroundScheduler()
 
@@ -337,8 +335,9 @@ def run_scrapping():
         # Shutdown the scheduler gracefully when a termination signal is received
         scheduler.shutdown()
 
-if __name__ == "__main__":
+def export_csv(outputfile):
+    print(outputfile)
     db_connection = connect_to_database(database)
-    create_table(db_connection)
+    new_data = extract_data(db_connection)
+    save_to_csv(new_data, outputfile)
     db_connection.close()
-    run_scrapping()
