@@ -2,7 +2,7 @@
 Scrapper which is scrapping event details and odds from [MMA recent events](https://fightodds.io/recent-mma-events).
 
 ## Installation
-### Installing individual package
+### 1. Installing individual package
 
 install selenium.
 ```bash
@@ -21,7 +21,7 @@ install Flask-BasicAuth.
 pip install Flask-BasicAuth
 ```
 
-### Using _requirements.txt_ file.
+### 2. Using _requirements.txt_ file.
 ```bash
 pip install -r requirements.txt
 ```
@@ -29,3 +29,16 @@ pip install -r requirements.txt
 ## Database
 Use SQLite database.
 DB **mma_odds.db**
+
+## Run Script
+Use **Python Command line** to run script.
+### 1. Run Scrapper
+Use **args** as _Limitdate_ to scrappe. If not set args, Default value(_2013-01-01_) will be set for _Limitdate_.
+```bash
+python3 run_scrapper.py 2022-01-01
+```
+### 2. Export data to csv file.
+Use **args** as _filename_ to save as file. If not set args, Default value(_current time:2023-07-30_8_12_36.csv_) will be set for _filename_.
+```bash
+python3 export_csv.py mydata.csv
+```
