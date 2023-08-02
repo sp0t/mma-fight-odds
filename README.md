@@ -25,3 +25,7 @@ pip install Flask-BasicAuth
 ```bash
 pip install -r requirements.txt
 ```
+
+## Database
+Use SQLite database.
+datafile **mma_odds.db**
