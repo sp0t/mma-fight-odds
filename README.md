@@ -15,7 +15,7 @@ pip install webdriver-manager
 install beautifulsoup4.
 ```bash
 pip install beautifulsoup4
-```bash
+```
 install Flask-BasicAuth.
 ```bash
 pip install Flask-BasicAuth
