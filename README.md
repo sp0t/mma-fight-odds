@@ -28,4 +28,4 @@ pip install -r requirements.txt
 
 ## Database
 Use SQLite database.
-datafile **mma_odds.db**
+DB **mma_odds.db**
